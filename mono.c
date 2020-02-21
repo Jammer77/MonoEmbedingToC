@@ -5,6 +5,7 @@ int main()
 {
     MonoDomain *domain;
     domain = mono_jit_init_version ("myapp", "v4.0.30319");
+    MonoAssembly *assembly; 
     assembly = mono_domain_assembly_open (domain, "file.exe");
     return 0;    
 }
