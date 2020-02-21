@@ -3,6 +3,7 @@ COMPILER=gcc
 LDFLAGS = -I/Mono/include/mono-2.0 `pkg-config --cflags --libs mono-2`
 
 exe: 
+	export PKG_CONFIG_PATH=/Mono/lib/pkgconfig/ 
 	$(COMPILER) mono.c $(LDFLAGS) 
 
 clear:
